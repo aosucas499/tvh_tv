@@ -1,4 +1,4 @@
-# The tvh_radio Project
+# The tvh_TV Project
 
 A streaming TV client for a TV Headend server which will be expanded to
 play other streams.
