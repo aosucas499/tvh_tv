@@ -1,10 +1,27 @@
 # The tvh_TV Project
 
-A streaming TV client for a TV Headend server which will be expanded to
-play other streams.
+To use in a raspberry Pi 1b, 2 or 3, it requires:
 
-Formerly known as the Yet Another Pi Radio application before it took on a
-life of its own.
++ Tvheadend running on a server (or on same pi)
++ MPEG-2 Hardware decoding 
+
+https://github.com/tvheadend/
+
+## Memory
+
+GPU memory should be a minimum of 128MB in config.txt
+
+    gpu_mem=128
+    
+## MPEG-2 decoding
+
+It requires that the MPEG-2 hardware codec is enabled (by
+purchase of the license). 
+
+To activate (forgotten) mpeg2 and VC codec licenses on raspberry pi follow this:
+
+[LINK](https://github.com/suuhm/raspi_mpeg_license_patch.sh)
+
 
 ## Usage
 
@@ -45,7 +62,7 @@ Then create an access entry for thet use allowing playing media etc like this:
 ## Getting the program
 
 * git clone this repository
-* make tvh_radio.py executable if necessary with "chmod ugo+x tvh_radio.py"
+* make tvh_tv.py executable if necessary with "chmod ugo+x tvh_tv.py"
 
 
 ## Running the program
@@ -60,23 +77,9 @@ key functions
 
 * ? - help
 * d - down a channel
-* f - favourite or unfavourite a channel
-* F - favourites list
 * h - help
-* m - mode change, from TVH to stream to favourites
 * p - play channel/stop channel
 * q - quit
-* s - speak channel name
-* t - speak time
 * u - up a channel
 
-# Road Map
 
-## Key/input customisation
-
-I intend to make the key presses customisable, so you could, say, use a
-numeric USB key pad to operate it. Also, to make it possible to use GPIOs
-and switches instead of a USB button board, something like the Display-O-Tron Hat:
-https://thepihut.com/collections/raspberry-pi-hats/products/display-o-tron-hat
-
-I also intend to make it possible to use a small LCD display to give status.
